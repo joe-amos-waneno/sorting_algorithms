@@ -2,10 +2,9 @@
 #include <stdio.h>
 
 /**
- * insertion_sort_list -func that sort a dll
+ * insertion_sort_list - entry
  * @list: db linked ls
- * Return: void
- * amine mohamed & salma abzou
+ * Return: 0 always
  */
 void insertion_sort_list(listint_t **list)
 {
