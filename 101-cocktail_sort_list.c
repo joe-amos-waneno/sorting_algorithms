@@ -33,30 +33,6 @@ void ls_Wap(listint_t **pt_one, listint_t **pt_tow, int n)
 }
 
 /**
- * cocktail_sort_list - Entry
- * @list: linked list
- * Return: 0 always
- */
-void cocktail_sort_list(listint_t **list)
-{
-        listint_t *lmt1, *pt, *lmt2;
-
-        if (list == NULL)
-                return;
-
-        if (*list == NULL)
-                return;
-
-        lmt1 = lmt2 = NULL;
-        pt = *list;
-
-        do {
-                srInc_rease(&pt, &lmt1, list);
-                srDec_rease(&pt, &lmt2, list);
-        } while (lmt1 != lmt2);
-}
-
-/**
  * srInc_rease - Entry point
  * @pt: pointer
  * @lmt: limit
@@ -112,4 +88,28 @@ void srDec_rease(listint_t **pt, listint_t **lmt, listint_t **ls)
 
 	*lmt = my_ax;
 	*pt = my_ax;
+}
+
+/**
+ * cocktail_sort_list - Entry
+ * @list: linked list
+ * Return: 0 always
+ */
+void cocktail_sort_list(listint_t **list)
+{
+        listint_t *lmt1, *pt, *lmt2;
+
+        if (list == NULL)
+                return;
+
+        if (*list == NULL)
+                return;
+
+        lmt1 = lmt2 = NULL;
+        pt = *list;
+
+        do {
+                srInc_rease(&pt, &lmt1, list);
+                srDec_rease(&pt, &lmt2, list);
+        } while (lmt1 != lmt2);
 }
